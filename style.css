@@ -169,7 +169,13 @@ body {
         height: 300px;
         width: 300px;
     }
-    
+
+    .panel {
+        flex: 0.05;
+    }
+    .panel.active {
+        flex: 1;
+    }
 }
 
 @media (max-width: 576px) {
