@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=PT+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+body {
+    background-color: black;
+    margin: 0;
+    /* central positioning */
+    flex-direction: column;
+    align-items: center;
+    /*vertikalno centriranje */
+    justify-content: center;
+    /* veličina cijelog ekrana pomoću VH*/
+    /* da se ne vidi scroll bar po defaultu*/
+}
+    
+.gallery-link {
+    text-decoration: none;
+    color: white;
+    transition: 0.4s ease-in;
+}
+
+.gallery-link:hover {
+    color: blueviolet;
+}
+
+/*THE MAIN CONTAINER SET AT 200VH AND TWO CONTAINER-PAGES SET AT 100VH*/
+.container {
+    height: 200vh;
+    overflow: hidden;
+}
+
+/*HOMEPAGE */
+.header {
+    height: 10vh;
+    width: 90vw;
+    border-bottom: 1px solid white;
+    position: relative;
+    margin: 0 5%;
+}
+
+.heading {
+    color: white;
+    position: absolute;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    letter-spacing: 5px;
+}
+
+.instagram {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.instagram:hover {
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.about {
+    height: 90vh;
+    margin: 0 10%;
+    /*PERFCET FLEX CENTRAL ALIGNMENT*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-portret,.div-paragraph{
+    width: 100%;
+    text-align: center;
+}
+.portret {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    /* object-fit resizes the picture and keeps the image quality*/
+    object-fit: cover;
+}
+
+.about-paragraph {
+    color: white;
+    font-size: 30px;
+    text-align: justify;
+    font-family: 'PT Serif', serif;
+}
+
+/*GALLERY*/
+
+.gallery {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 5%;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px 0;
+    color: white;
+    cursor: pointer;
+    flex: 0.2;
+    margin: 5px;
+    position: relative;
+    transition: flex 0.5s ease-in;
+}
+
+.panel:hover {
+    border: 3px solid white;
+}
+
+.panel h3 {
+    font-family: 'PT Serif', serif;
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 1;
+}
+ /*transition to opacity - opacity/ease-in mode / delay*/
+.panel.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.5s;
+}
+
+/*MOBILE FIRST*/ 
+
+/*GALLERY TO SHOW ONLY 6 IMAGES*/
+
+@media (max-width: 480px) {
+    .panel:nth-last-of-type(7),.panel:nth-last-of-type(8),.panel:nth-last-of-type(9),.panel:nth-last-of-type(10),.panel:nth-last-of-type(11),.panel:nth-last-of-type(12){
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .panel:nth-last-of-type(7),.panel:nth-last-of-type(8),.panel:nth-last-of-type(9),.panel:nth-last-of-type(10),.panel:nth-last-of-type(11),.panel:nth-last-of-type(12){
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        flex-direction: column;
+    }
+    .portret {
+        height: 350px;
+        width: 350px;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .about {
+        flex-direction: column;
+    }
+    .portret {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+
+
