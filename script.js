@@ -20,4 +20,19 @@ function removeActiveClasses() {
 
 /*DARK/LIGHT MODE */
 
-/*SCROLL ENTIRE PAGE ON SCROLL*/
+document.getElementById('button').onclick = function() {
+    document.body.classList.toggle('light-mode');
+    document.getElementById('header').classList.toggle('header-ligth-mode');
+    toggleInstagram();
+}
+
+function toggleInstagram () {
+    if (document.body.classList.contains('light-mode') == true) {
+        document.getElementById('instagram').src = "img/insta.png";
+        document.getElementById('ball').classList = "ball-ligth";
+    } else {
+        document.getElementById('instagram').src = "img/instagram.png";
+        document.getElementById('ball').classList = "ball-dark";
+    }
+}
+

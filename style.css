@@ -7,6 +7,7 @@
 body {
     background-color: black;
     margin: 0;
+    color: white;
     /* central positioning */
     flex-direction: column;
     align-items: center;
@@ -15,16 +16,44 @@ body {
     /* veličina cijelog ekrana pomoću VH*/
     /* da se ne vidi scroll bar po defaultu*/
 }
-    
-.gallery-link {
-    text-decoration: none;
-    color: white;
-    transition: 0.4s ease-in;
+/* dark/ligth mode button*/
+
+#button {
+    height: 45px;
+    width: 60px;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    transform: translateY(-50%);
+    border-radius: 50px;
 }
 
-.gallery-link:hover {
-    color: blueviolet;
+.ball-dark {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    transform: translateY(-85%);
+    transition: 0.1s ease-in;
 }
+
+.ball-ligth{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+    transform: translate(100%, -85%);
+    transition: 0.1s ease-in;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+
 
 /*THE MAIN CONTAINER SET AT 200VH AND TWO CONTAINER-PAGES SET AT 100VH*/
 .container {
@@ -41,26 +70,24 @@ body {
     margin: 0 5%;
 }
 
+.header-ligth-mode {
+    border-bottom: 1px solid black;
+}
+
 .heading {
-    color: white;
     position: absolute;
     font-family: 'Oleo Script Swash Caps', cursive;
     letter-spacing: 5px;
 }
 
 .instagram {
-    background-color: black;
+    background-color: transparent;
     height: 50px;
     width: 50px;
     position: absolute;
     right: 0%;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.instagram:hover {
-    border: 1px solid white;
-    border-radius: 10%;
 }
 
 .about {
@@ -86,7 +113,6 @@ body {
 }
 
 .about-paragraph {
-    color: white;
     font-size: 30px;
     text-align: justify;
     font-family: 'PT Serif', serif;
@@ -96,7 +122,6 @@ body {
 
 .gallery {
     height: 100vh;
-    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
