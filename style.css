@@ -24,7 +24,6 @@ body {
     position: fixed;
     right: 5%;
     bottom: 5%;
-    transform: translateY(-50%);
     border-radius: 50px;
 }
 
@@ -34,7 +33,7 @@ body {
     border-radius: 50%;
     position: absolute;
     background-color: black;
-    transform: translateY(-87%);
+    transform: translate(15%,-90%);
     transition: 0.1s ease-in;
 }
 

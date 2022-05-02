@@ -20,7 +20,7 @@ function removeActiveClasses() {
 
 /*DARK/LIGHT MODE */
 
-document.getElementById('button').onclick = function() {
+document.getElementById('button').onclick = () => {
     document.body.classList.toggle('light-mode');
     document.getElementById('header').classList.toggle('header-ligth-mode');
     toggleInstagram();
